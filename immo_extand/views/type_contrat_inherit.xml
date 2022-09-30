@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+      
+      
+         <!--by CTD-->
+       <record id="type_contrat_extand" model="ir.ui.view">
+      <field name="name">type.contrat.extand</field>
+      <field name="model">lb.contrat</field>
+      <field name="inherit_id" ref="type_contrat.contrat_form_view"/>
+      <field name="arch" type="xml">
+        <field name='status_contrat' position="after">
+          <field name="company_id"/>
+          <field name='projet_id'/>
+        
+        </field>
+        </field>
+
+            </record>
+      
+      
+      
+      
+    </data>
+</odoo>    
+
+        

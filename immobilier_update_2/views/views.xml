@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="immobilier_update_2.list">
+      <field name="name">immobilier_update_2 list</field>
+      <field name="model">immobilier_update_2.immobilier_update_2</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="immobilier_update_2.action_window">
+      <field name="name">immobilier_update_2 window</field>
+      <field name="res_model">immobilier_update_2.immobilier_update_2</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="immobilier_update_2.action_server">
+      <field name="name">immobilier_update_2 server</field>
+      <field name="model_id" ref="model_immobilier_update_2_immobilier_update_2"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="immobilier_update_2" id="immobilier_update_2.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="immobilier_update_2.menu_1" parent="immobilier_update_2.menu_root"/>
+    <menuitem name="Menu 2" id="immobilier_update_2.menu_2" parent="immobilier_update_2.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="immobilier_update_2.menu_1_list" parent="immobilier_update_2.menu_1"
+              action="immobilier_update_2.action_window"/>
+    <menuitem name="Server to list" id="immobilier_update_2" parent="immobilier_update_2.menu_2"
+              action="immobilier_update_2.action_server"/>
+-->
+  </data>
+</odoo>

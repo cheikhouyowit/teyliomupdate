@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+      
+       <!--Nouvelle fonction du module immobilier-->
+       
+                 <!--by Optesis-CTD-->
+        
+  <record id="crm_form_extand" model="ir.ui.view">
+      <field name="name">crm.lead.form.extand</field>
+        <field name="model">crm.lead</field>
+           <field name="inherit_id" ref="immobilier.crm_form"/>
+                 
+                 <field name="arch" type="xml">   
+                        <xpath expr="//field[@name='bien']" position="before">
+                                  
+                                   <xpath expr ="//field[@name='contrat_id']" position ="move" /> 
+                                          
+                                           </xpath >
+                                                    
+                                                     <field name='contrat_id' position="before">
+                                                                     <!-- <field name='contrat_projet_ids'  widget="many2many_tags"/>-->
+                                                                                    <field name="contrat_type" placeholder="Tags..." 
+                                                                                                             />
+                                                                         <!--<field name="contrat_select"/>-->
+                                                      </field>
+                           
+                                               <field name='contrat_type' position="inside">
+                                      <!-- <field name='contrat_projet_ids'  widget="many2many_tags"/>-->
+                            
+                             <field name="contrat_id"   position ="move"  />
+                            <!--<field name="contrat_select"/>-->
+                      
+                        </field>
+                  
+                   </field>
+         
+            </record>
+
+
+            <record id="crm_form_extand_ilot" model="ir.ui.view">
+                              <field name="name">crm.lead.form.extand.ilot</field>
+                                <field name="model">crm.lead</field>
+                                   <field name="inherit_id" ref="immo_update.crm_immo_update"/>
+
+                                         <field name="arch" type="xml">  
+
+
+                                                 <xpath expr="//field[@name='contrat_type']"  position="after">
+                                                           <xpath expr ="//field[@name='ilot_ids']" position ="move" /> 
+                                                        <!--<xpath expr ="//field[@name='status_ilot']" position='move'/>-->
+                                        </xpath>
+
+
+                            </field>
+
+            </record>     
+    
+    </data>
+
+</odoo>    
